@@ -1,4 +1,7 @@
 
+steps:      
+  - uses: actions/setup-node@master  
+
  action "Azure Login" {
   uses = "Azure/github-actions/login@master"
   env = {
