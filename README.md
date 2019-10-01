@@ -1,2 +1,1 @@
-# GlobalLogic
-GL
+# sampleazurefunction
