@@ -2,19 +2,8 @@
 name: 'Login Azure'
 description: 'Login Azure wraps the az login, allowing for Azure actions to log into Azure'
 inputs: 
-  creds:
-    description: {
-  "clientId": "81517f85-2158-44c0-b9d6-b26ec9d80096",
-  "clientSecret": "cd6e1fa0-6df9-4c35-926c-4fb5714c652b",
-  "subscriptionId": "12652e5d-423a-4d65-9705-b2d088651222",
-  "tenantId": "f16593fa-a42d-44cd-b2be-e8393b6251e0",
-  "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-  "resourceManagerEndpointUrl": "https://management.azure.com/",
-  "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-  "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-  "galleryEndpointUrl": "https://gallery.azure.com/",
-  "managementEndpointUrl": "https://management.core.windows.net/"
-}: AZURE_CREDENTIALS'
+  creds: AZURE_CREDENTIALS
+    description: 'Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS'
     required: true
 branding:
   icon: 'login.svg'
