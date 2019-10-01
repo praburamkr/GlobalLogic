@@ -17,3 +17,6 @@ jobs:
       run: dotnet build --configuration Release
     - name: Unit Tests
       run: dotnet test
+      
+    - uses: actions/Azure Login
+    - uses: Deploy to Azure  Function App
