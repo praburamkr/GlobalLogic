@@ -18,7 +18,4 @@ jobs:
     - name: Unit Tests
       run: dotnet test
       
-    - name: Azurelogin
-      uses: actions/Azure Login
-    - name: Deploy
-      uses: actions/Deploy to Azure Function App
+    - uses: ./.github/actions/mgm-action
