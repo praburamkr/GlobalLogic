@@ -18,4 +18,9 @@ jobs:
     - name: Unit Tests
       run: dotnet test
       
-    - uses: ./.github/actions/mgm-action
+    - uses: azure/actions/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - run: |
+        az webapp list --query "[?state=='Running']"
